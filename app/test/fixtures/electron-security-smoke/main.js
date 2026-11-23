@@ -34,7 +34,7 @@ dialog.showMessageBox = async (...args) => {
 };
 async function verifyScriptWorker() {
     const output = path.join(temporaryRoot, "utility-script-result.txt");
-    const worker = utilityProcess.fork(path.join(applicationRoot, "dist/electron/entry/utility/script-worker.js"), [], { stdio: "ignore" });
+    const worker = utilityProcess.fork(path.join(applicationRoot, "src/electron/entry/utility/script-worker.js"), [], { stdio: "ignore" });
     const run = message => new Promise((resolve, reject) => {
         const receive = result => {
             if (result.type !== "result" || result.job !== message.job) return;
@@ -528,5 +528,5 @@ controllerServer.listen(0, "127.0.0.1", async () => {
         "  - MATCH,DIRECT",
         ""
     ].join("\n"));
-    require(path.join(applicationRoot, "dist/electron/main.js"));
+    require(path.join(applicationRoot, "src/electron/main.js"));
 });

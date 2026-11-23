@@ -5,7 +5,7 @@ const path = require("node:path");
 
 const rendererPath = path.resolve(
     __dirname,
-    "../../app/main/dist/electron/renderer.js"
+    "../../app/main/src/electron/renderer.js"
 );
 let source = fs.readFileSync(rendererPath);
 const newline = source.includes(Buffer.from("\r\n")) ? "\r\n" : "\n";

@@ -6,13 +6,13 @@ const net = require("node:net");
 const {
     detectDefaultInterface,
     listNetworkInterfaces
-} = require("../../main/dist/electron/features/network/network-interfaces");
+} = require("../../main/src/electron/features/network/network-interfaces");
 const {
     listWlanInterfaces
-} = require("../../main/dist/electron/features/network/wlan-interfaces");
+} = require("../../main/src/electron/features/network/wlan-interfaces");
 const {
     createMacSystemProxyCommand
-} = require("../../main/dist/electron/features/network/mac-system-proxy-command");
+} = require("../../main/src/electron/features/network/mac-system-proxy-command");
 
 test("network interface listing excludes internal and IPv6 addresses", () => {
     const result = listNetworkInterfaces({

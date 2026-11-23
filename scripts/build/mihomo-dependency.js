@@ -4,7 +4,7 @@ const crypto = require("node:crypto");
 const fs = require("node:fs");
 const os = require("node:os");
 const path = require("node:path");
-const { resolveCoreBinaryPath } = require("../../app/main/dist/electron/core/clash-core/core-selection");
+const { resolveCoreBinaryPath } = require("../../app/main/src/electron/core/clash-core/core-selection");
 const { downloadFile, extractBinary } = require("./mihomo-download");
 
 const repositoryRoot = path.resolve(__dirname, "../..");

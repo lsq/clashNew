@@ -10,7 +10,7 @@ const {
     applyAndVerifyMixedPort,
     confirmMixedPortConflict,
     recoverWithRandomPort
-} = require("../../main/dist/electron/core/network/mixed-port-recovery");
+} = require("../../main/src/electron/core/network/mixed-port-recovery");
 
 test("TCP port checks reject an occupied port and random selection is rechecked", async t => {
     const server = net.createServer();
